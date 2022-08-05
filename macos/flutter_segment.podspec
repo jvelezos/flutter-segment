@@ -16,7 +16,7 @@ A new flutter plugin project.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'Analytics', '4.1.6'
-  s.osx.deployment_target = '10.11'
+  s.osx.deployment_target = '10.12'
 
   # Added because Segment-Amplitude dependencies on iOS cause this error:
   # [!] The 'Pods-Runner' target has transitive dependencies that include statically linked binaries: (Segment-Amplitude)
