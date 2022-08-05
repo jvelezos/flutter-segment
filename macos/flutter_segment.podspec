@@ -17,7 +17,6 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.dependency 'Analytics', '4.1.6'
   s.dependency 'Segment-Amplitude', '3.3.2'
-  s.dependency 'segment-appsflyer-ios', '6.5.2'
   s.osx.deployment_target = '10.12'
 
   # Added because Segment-Amplitude dependencies on iOS cause this error:
