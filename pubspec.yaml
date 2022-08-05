@@ -30,6 +30,8 @@ flutter:
         pluginClass: FlutterSegmentPlugin
       ios:
         pluginClass: FlutterSegmentPlugin
+      macos:
+        pluginClass: FlutterSegmentPlugin
       web:
         pluginClass: SegmentWeb
         fileName: segment_web.dart
