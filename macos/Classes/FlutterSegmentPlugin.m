@@ -2,7 +2,6 @@
 #import <Segment/SEGAnalytics.h>
 #import <Segment/SEGContext.h>
 #import <Segment/SEGMiddleware.h>
-#import <Segment_Amplitude/SEGAmplitudeIntegrationFactory.h>
 
 @implementation FlutterSegmentPlugin
 // Contents to be appended to the context
@@ -365,13 +364,8 @@ static BOOL wasSetupFromFile = NO;
 + (SEGAnalyticsConfiguration*)createConfigFromDict:(NSDictionary*) dict {
     NSString *writeKey = [dict objectForKey: @"writeKey"];
     BOOL trackApplicationLifecycleEvents = [[dict objectForKey: @"trackApplicationLifecycleEvents"] boolValue];
-    BOOL isAmplitudeIntegrationEnabled = [[dict objectForKey: @"amplitudeIntegrationEnabled"] boolValue];
     SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:writeKey];
     configuration.trackApplicationLifecycleEvents = trackApplicationLifecycleEvents;
-
-    if (isAmplitudeIntegrationEnabled) {
-      [configuration use:[SEGAmplitudeIntegrationFactory instance]];
-    }
 
     return configuration;
 }
